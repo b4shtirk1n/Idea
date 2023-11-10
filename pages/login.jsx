@@ -1,14 +1,6 @@
-import { useContext, useState } from "react";
-import { IsLoginContext } from "../contexts/isLoginContext";
 import "../styles/login.css";
 
 export default function Login() {
-  const { setIsLogin } = useContext(IsLoginContext);
-
-  function handleClick() {
-    setIsLogin(true);
-  }
-
   return (
     <div class="login-form ai-c">
       <div class="login-title">
