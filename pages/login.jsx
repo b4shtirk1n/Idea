@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "../Api/axios";
 import "../styles/login.css";
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,12 +19,12 @@ export default function Login() {
   async function SingIn() {
     try {
       const response = await axios.post("/User/SingIn", data);
-      console.log("ok")
+      return navigate("/");
     } catch (err) {
       if (!err.response) {
-        setErrMsg("");
+        console.log("");
       } else {
-        setErrMsg("");
+        console.log("");
       }
     }
   }

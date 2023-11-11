@@ -13,10 +13,10 @@ export default function Reg() {
         <input type="password" placeholder="Пароль" />
       </div>
       <div class="login-btn flex jc-c">
-        <a href="../../index.html">Создать</a>
+        <a href="reg">Создать</a>
       </div>
       <div class="login-btn reg flex jc-c">
-        <a href="login.html">Войти</a>
+        <a href="login">Войти</a>
       </div>
     </div>
   );
