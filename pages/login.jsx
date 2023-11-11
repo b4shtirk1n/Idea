@@ -1,8 +1,47 @@
+import { useEffect, useRef, useState } from "react";
+import axios from "../Api/axios";
 import "../styles/login.css";
 
 export default function Login() {
-  function handelClick() {
-    console.log("Ok");
+  const userRef = useRef();
+  const errRef = useRef();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errMsg, setErrMsg] = useState("");
+
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    setErrMsg("");
+  }, [email, password]);
+
+  const data = JSON.stringify(
+    { email, password },
+    {
+      headers: { "Content-Type": "Application/json" },
+    }
+  );
+
+  async function SingIn() {
+    try {
+      const response = await axios.post("/User/SingIn");
+    } catch (err) {
+      if (!err.response) {
+        setErrMsg("");
+      } else {
+        setErrMsg("");
+      }
+    }
+  }
+
+  async function handelClick(e) {
+    e.preventDefault();
+    await SingIn();
+    setEmail("");
+    setPassword("");
   }
 
   return (
