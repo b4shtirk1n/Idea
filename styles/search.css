@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.photo-spec{
+    background: url("../image/user.png") no-repeat;
+    width: 100%;
+    height: auto;
+    padding-right: 100px;
+}
+
+.name-spec{
+    padding-bottom: 5px;
+}
+
+.name-spec p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.city{
+    padding-bottom: 5px;
+}
+
+.city p{
+    font-size: 14px;
+    color: #3A8400;
+}
+
+.descript{
+    padding-bottom: 5px;
+}
+
+.descript p{
+    font-size: 16px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.card-spec{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 0;
+    max-width: 1000px;
+}
+
+footer{
+}

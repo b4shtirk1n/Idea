@@ -1,6 +1,10 @@
 import "../styles/login.css";
 
 export default function Login() {
+  function handelClick() {
+    console.log("Ok");
+  }
+
   return (
     <div class="login-form ai-c">
       <div class="login-title">
@@ -10,8 +14,8 @@ export default function Login() {
         <input type="text" placeholder="Номер телефона" />
         <input type="password" placeholder="Пароль" />
       </div>
-      <div class="login-btn flex jc-c" onMouseDown={handleClick}>
-        <a href="/">Войти</a>
+      <div class="login-btn flex jc-c" onClick={handelClick}>
+        <a>Войти</a>
       </div>
       <div class="login-btn reg flex jc-c">
         <a href="reg">Регистрация</a>
