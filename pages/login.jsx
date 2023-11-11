@@ -3,23 +3,11 @@ import axios from "../Api/axios";
 import "../styles/login.css";
 
 export default function Login() {
-  const userRef = useRef();
-  const errRef = useRef();
-
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [errMsg, setErrMsg] = useState("");
-
-  useEffect(() => {
-    userRef.current.focus();
-  }, []);
-
-  useEffect(() => {
-    setErrMsg("");
-  }, [email, password]);
 
   const data = JSON.stringify(
-    { email, password },
+    { phone, password },
     {
       headers: { "Content-Type": "Application/json" },
     }
@@ -27,7 +15,8 @@ export default function Login() {
 
   async function SingIn() {
     try {
-      const response = await axios.post("/User/SingIn");
+      const response = await axios.post("/User/SingIn", data);
+      console.log("ok")
     } catch (err) {
       if (!err.response) {
         setErrMsg("");
@@ -40,7 +29,7 @@ export default function Login() {
   async function handelClick(e) {
     e.preventDefault();
     await SingIn();
-    setEmail("");
+    setPhone("");
     setPassword("");
   }
 
@@ -50,8 +39,18 @@ export default function Login() {
         <h2>Авторизация</h2>
       </div>
       <div class="form-input flex column">
-        <input type="text" placeholder="Номер телефона" />
-        <input type="password" placeholder="Пароль" />
+        <input
+          type="text"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          placeholder="Номер телефона"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Пароль"
+        />
       </div>
       <div class="login-btn flex jc-c" onClick={handelClick}>
         <a>Войти</a>
