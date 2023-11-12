@@ -37,11 +37,11 @@ export default function Login() {
   }
 
   return (
-    <div class="login-form ai-c">
-      <div class="login-title">
+    <div className="login-form ai-c">
+      <div className="login-title">
         <h2>Авторизация</h2>
       </div>
-      <div class="form-input flex column">
+      <div className="form-input flex column">
         <input
           type="text"
           value={phone}
@@ -55,10 +55,10 @@ export default function Login() {
           placeholder="Пароль"
         />
       </div>
-      <div class="login-btn flex jc-c" onClick={handelClick}>
+      <div className="login-btn flex jc-c" onClick={handelClick}>
         <a>Войти</a>
       </div>
-      <div class="login-btn reg flex jc-c">
+      <div className="login-btn reg flex jc-c">
         <a href="reg">Регистрация</a>
       </div>
     </div>

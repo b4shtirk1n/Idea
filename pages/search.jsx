@@ -2,17 +2,17 @@ import "../styles/search.css";
 
 export default function Search() {
   return (
-    <main class="conteiner">
-      <div class="card-spec flex">
-        <div class="photo-spec"></div>
-        <div class="info-spec">
-          <div class="name-spec">
+    <main className="conteiner">
+      <div className="card-spec flex">
+        <div className="photo-spec"></div>
+        <div className="info-spec">
+          <div className="name-spec">
             <p>Георгий Рудковский</p>
           </div>
-          <div class="city">
+          <div className="city">
             <P>Рублевка</P>
           </div>
-          <div class="descript">
+          <div className="descript">
             <p>
               Сфера деятельности: Ремонт оргтехники, Компьютерный ремонт и
               услуги, Ремонт телефонов, Ремонт аудиотехники и видеотехники,
@@ -29,14 +29,14 @@ export default function Search() {
               Xiaomi, Honor Ремонт:
             </p>
           </div>
-          <div class="btn-contact flex">
-            <div class="item">
+          <div className="btn-contact flex">
+            <div className="item">
               <a href="#">Телефон</a>
             </div>
-            <div class="item">
+            <div className="item">
               <a href="#">Написать</a>
             </div>
-            <div class="item">
+            <div className="item">
               <a href="#">Добавить в список</a>
             </div>
           </div>
